@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Temperature sensors</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  </head>
+  <body ng-app="IoTApp">
+    <h1>Data from temperature sensors</h1>
+    <div ng-controller="main">
+      <div>
+        <p>Last measurement: {{ main.lastMeasurement }}, Date: {{ main.lastDate }}, {{ main.sensorId }}</p>
+      </div>
+    </div>
+    <script src="/angular.js"></script>
+    <script src="/iotf-client-bundle.min.js"></script>
+    <script src="/javascripts/app.js"></script>
+  </body>
+</html>
