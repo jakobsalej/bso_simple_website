@@ -1,0 +1,4 @@
+applications:
+- name: web-app-bso
+  random-route: true
+  memory: 128M

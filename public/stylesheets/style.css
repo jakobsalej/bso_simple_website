@@ -1,8 +1,64 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+   font-family: 'Open Sans', serif;
 }
 
-a {
-  color: #00B7FF;
+
+.shadow {
+	position: relative;
+	z-index: 2;
 }
+
+.rounded {
+	border-radius: 15px;
+}
+
+.big-font {
+	font-size: 1.6em;
+	font-weight: 600;
+}
+
+.medium-font {
+	/*font-size: 1.7em;*/
+	font-weight: 600;
+}
+
+.MT-30 {
+	margin-top: 30px;
+}
+
+.MT-20 {
+	margin-top: 20px;
+}
+
+.MT-13 {
+	margin-top: 13px;
+}
+
+.ML-130 {
+	margin-left: 130px;
+}
+
+.ML-30 {
+	margin-left: 30px;
+}
+
+.pad {
+	padding: 15px;
+	padding-top: 30px;
+	background-color: rgba(238, 238, 238, 0.75)
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.color-green {
+	font-weight: 800;
+	color: #4caf50;
+}
+
+.color-red {
+	font-weight: 800;
+	color: #d84315;
+}
+

@@ -24,6 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //Exposing scripts to the web app
 app.use(express.static(path.join(__dirname ,'node_modules/angular' )));
+app.use(express.static(path.join(__dirname ,'node_modules/angularjs-gauge/dist' )));
 app.use(express.static(path.join(__dirname ,'node_modules/ibmiotf/dist' )));
 
 app.use('/', routes);

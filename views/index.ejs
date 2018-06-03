@@ -2,17 +2,62 @@
 <html>
   <head>
     <title>Temperature sensors</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
   </head>
+
   <body ng-app="IoTApp">
-    <h1>Data from temperature sensors</h1>
     <div ng-controller="main">
-      <div>
-        <p>Last measurement: {{ main.lastMeasurement }}, Date: {{ main.lastDate }}, {{ main.sensorId }}</p>
+      <md-toolbar class="shadow md-accent md-hue-3">
+        <div layout="row">
+          <h1 class="md-toolbar-tools">
+            <span class="medium-font">BSO: Temperature sensors</span>
+          </h1>
+        </div>
+      </md-toolbar>
+      <div class="pad">
+        <!-- <span class="MT-30 big-font uppercase">Sensor 1</span>
+         --><div layout="row">
+          <div class="MT-30 ML-30" layout="row" layout-align="start start">
+            <ng-gauge 
+              size="290"
+              type="arch"
+              thick="5" 
+              min="0"
+              max="40"
+              value="main.lastMeasurement" 
+              cap="butt"
+              foreground-color="#e74c3c"
+              label="Temperature" append="°C">
+            </ng-gauge>
+            <div class="ML-130 MT-20" flex>
+              <span class="MT-30 big-font uppercase">Sensor 1</span>
+              <md-divider class="MT-13"></md-divider>
+              <p><b>Status:</b>
+                <span ng-if="!main.connectionStatus" class="color-red uppercase">Offline</span>
+                <span ng-if="main.connectionStatus" class="color-green uppercase">Online</span>
+              </p>
+              <p><b>Sensor ID:</b> {{ main.sensorId }}</p>
+              <p><b>Last measurement:</b> {{ main.lastMeasurement? main.lastMeasurement : '/' }} °C</p>
+              <p><b>Timestamp of last measurement:</b> {{ main.lastDate }}</p>
+            </div>  
+            <!-- <div class="ML-50" layout="row">
+              <md-divider></md-divider>
+              <p><b>Sensor ID:</b> {{ main.sensorId }}</p>
+              <p><b>Last measurement:</b> {{ main.lastMeasurement }} °C</p>
+              <p><b>Timestamp of last measurement:</b> {{ main.lastDate }}</p>
+            </div> -->
+        </div>  
       </div>
-    </div>
-    <script src="/angular.js"></script>
+    </div>  
+    <!-- <script src="/angular.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+    <script src="/angularjs-gauge.min.js"></script>
     <script src="/iotf-client-bundle.min.js"></script>
     <script src="/javascripts/app.js"></script>
   </body>
